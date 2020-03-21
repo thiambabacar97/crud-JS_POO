@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+</head>
+<body>
+    <div class="container mt-3" >
+        <div class="row">
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body">
+                    <form action="javascript:void(0);" method="POST" id="form">
+                        <div class="form-group">
+                          <label for="title">Title</label>
+                          <input type="text" class="form-control " id="title" onchange="controlInput()">
+                          <span id="infoTitle"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="auteur">Auteur</label>
+                            <input type="text" class="form-control " id="auteur" onchange="controlInput()" >
+                            <span id="infoAuteur"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="isbn">ISBN</label>
+                            <input type="text" class="form-control " id="isbn" onchange="controlInput()" >
+                            <span id="infoIsbn"></span>
+                        </div>
+                      </form>
+                      <button class="btn btn-primary" id="btn" disabled onclick="Add()">Submit</button>
+                      <button class="btn btn-primary float-rigth" id="btn1" disabled>update</button>
+                </div>
+              </div>
+            </div>  
+            <div class="col-sm-9">
+              <div class="card">
+                <div class="card-body">
+                  <div class="alert alert-danger text-center" hidden id="notData"> Pas de Contenue</div>
+                    <table class="table table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Auteur</th>
+                            <th scope="col">ISBN</th>
+                            <th scope="col">update</th>
+                            <th scope="col">delete</th>
+                          </tr>
+                        </thead>
+                        <tbody id="livres">
+                          
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="book.js" ></script>
+    
+</body>
+</html>
